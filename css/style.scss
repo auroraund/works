@@ -1,0 +1,120 @@
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: rgb(234, 234, 234);
+
+    main {
+        margin-inline: 10%;
+
+        .top-image-container {
+            .site-title {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+    
+            img.top-image {
+                width: 100%;
+            }
+        }
+
+        .flex-column-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            gap: 30px;
+
+            .flex-container {
+                display: flex;
+
+                .flex-item {
+                    &#left {
+                        min-width: 50%;
+                        border-right: solid 1px;
+                        padding-right: 10px;
+
+                        .site-main-caption {
+                            font-size: 28px;
+                        }
+                    }
+
+                    &#right {
+                        gap: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        padding-inline: 10px;
+
+                        .inner-flex-item {
+                            padding-inline: 10px;
+
+                            .item-title {
+                                margin-bottom: 2px;
+                            }
+                        }
+                    }
+                }
+
+
+                @media screen and (max-width: 800px) {
+                    /*ウィンドウ幅がXXXpx以下の場合に適用*/
+                    flex-direction: column;
+                    row-gap: 30px;
+
+                    .flex-item {
+                        min-width: 100%;
+
+                        &#left {
+                            padding-left: 0;
+                            border-right: solid 0px;
+                            border-bottom: solid 1px;
+
+                            .site-main-caption {
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        &#right {
+                            flex-direction: column;
+                            padding-inline: 0px;
+
+                            .inner-flex-item {
+                                padding: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .image-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .image-item {
+                        width: calc(50% - 5px);
+
+                        img {
+                            width: 100%;
+                        }
+
+                        .work-name {
+                            margin-top: 5px;
+                        }
+                }
+
+                @media screen and (max-width: 800px) {
+                    /*ウィンドウ幅がXXXpx以下の場合に適用*/
+
+                    .image-item {
+                        width: 100%;
+                }
+                }
+            }
+        }
+
+    }
+
+    footer {
+        background-color: rgb(98, 98, 98);
+        padding: 20px;
+        color: rgb(255, 255, 255);
+    }
+}
