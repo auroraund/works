@@ -132,13 +132,31 @@ body {
                     }
                 }
 
-                .image-container {
+                .gallery-image-container {
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 10px;
+                    gap: 4px;
+
+                    img {
+                        width: calc(50% - 2px);
+                    }
+
+                    @media screen and (max-width: 800px) {
+                        /*ウィンドウ幅がXXXpx以下の場合に適用*/
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .link-image-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 4px;
 
                     .image-item {
-                        width: calc(50% - 5px);
+                        width: calc(50% - 4px/2);
 
                         img {
                             width: 100%;
