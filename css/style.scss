@@ -2,6 +2,35 @@ body {
     font-family: 'Jost', sans-serif;
     background-color: rgb(234, 234, 234);
 
+    /*以下、ヘッダースクロール*/
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: top 0.3s ease-in-out;
+        z-index: 1000;
+        /* ヘッダーを最前面に配置 */
+    }
+
+    .hidden {
+        top: -50px;
+    }
+
+    main {
+        margin-top: 50px;
+        /* メインコンテンツの上部にヘッダーの高さを確保 */
+    }
+
+    /*以上、ヘッダースクロール*/
+
     main {
         margin-inline: 10%;
         margin-top: 30px;
