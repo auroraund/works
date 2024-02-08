@@ -5,6 +5,7 @@ body {
 }
 body main {
   margin-inline: 10%;
+  margin-top: 30px;
 }
 body main .top-image-container .site-title {
   font-size: 40px;
@@ -17,80 +18,110 @@ body main .flex-column-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  gap: 30px;
+  gap: 60px;
 }
 body main .flex-column-container .flex-container {
   display: flex;
 }
-body main .flex-column-container .flex-container .flex-item#left {
+body main .flex-column-container .flex-container .flex-item.left {
   min-width: 50%;
-  border-right: solid 1px;
   padding-right: 10px;
+  height: 100%;
 }
-body main .flex-column-container .flex-container .flex-item#left .site-main-caption {
+body main .flex-column-container .flex-container .flex-item.left .item-name-container .site-main-caption {
   font-size: 28px;
+  margin-bottom: 4px;
 }
-body main .flex-column-container .flex-container .flex-item#right {
-  gap: 20px;
+body main .flex-column-container .flex-container .flex-item.left .item-name-container .site-sub-caption {
+  font-size: 14px;
+}
+body main .flex-column-container .flex-container .flex-item.left#about {
+  flex-direction: column;
+}
+body main .flex-column-container .flex-container .flex-item.left#works {
+  flex-direction: column;
+}
+body main .flex-column-container .flex-container .flex-item.right {
+  gap: 30px;
   display: flex;
   flex-direction: column;
+}
+body main .flex-column-container .flex-container .flex-item.right .inner-flex-item {
   padding-inline: 10px;
 }
-body main .flex-column-container .flex-container .flex-item#right .inner-flex-item {
-  padding-inline: 10px;
+body main .flex-column-container .flex-container .flex-item.right .inner-flex-item .item-title {
+  margin-bottom: 8px;
 }
-body main .flex-column-container .flex-container .flex-item#right .inner-flex-item .item-title {
-  margin-bottom: 2px;
+body main .flex-column-container .flex-container .flex-item.right .inner-flex-item .item-caption {
+  font-size: 14px;
+}
+body main .flex-column-container .flex-container#about .right {
+  border-left: solid 1px;
+}
+body main .flex-column-container .flex-container#works {
+  flex-direction: column;
+}
+body main .flex-column-container .flex-container#works .right {
+  margin-bottom: 20px;
+  border-top: solid 1px;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 @media screen and (max-width: 800px) {
   body main .flex-column-container .flex-container {
     /*ウィンドウ幅がXXXpx以下の場合に適用*/
     flex-direction: column;
-    row-gap: 30px;
   }
   body main .flex-column-container .flex-container .flex-item {
     min-width: 100%;
   }
-  body main .flex-column-container .flex-container .flex-item#left {
+  body main .flex-column-container .flex-container .flex-item.left {
     padding-left: 0;
-    border-right: solid 0px;
-    border-bottom: solid 1px;
   }
-  body main .flex-column-container .flex-container .flex-item#left .site-main-caption {
+  body main .flex-column-container .flex-container .flex-item.left .site-main-caption {
     margin-bottom: 10px;
   }
-  body main .flex-column-container .flex-container .flex-item#right {
+  body main .flex-column-container .flex-container .flex-item.right {
     flex-direction: column;
     padding-inline: 0px;
   }
-  body main .flex-column-container .flex-container .flex-item#right .inner-flex-item {
+  body main .flex-column-container .flex-container .flex-item.right .inner-flex-item {
     padding: 0px;
   }
+  body main .flex-column-container .flex-container#about .right {
+    border-top: solid 1px;
+    border-left: none;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  body main .flex-column-container .flex-container#works {
+    flex-direction: column;
+  }
 }
-body main .flex-column-container .image-container {
+body main .flex-column-container .flex-container .image-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-body main .flex-column-container .image-container .image-item {
+body main .flex-column-container .flex-container .image-container .image-item {
   width: calc(50% - 5px);
 }
-body main .flex-column-container .image-container .image-item img {
+body main .flex-column-container .flex-container .image-container .image-item img {
   width: 100%;
 }
-body main .flex-column-container .image-container .image-item .work-name {
+body main .flex-column-container .flex-container .image-container .image-item .work-name {
   margin-top: 5px;
 }
 @media screen and (max-width: 800px) {
-  body main .flex-column-container .image-container {
+  body main .flex-column-container .flex-container .image-container {
     /*ウィンドウ幅がXXXpx以下の場合に適用*/
   }
-  body main .flex-column-container .image-container .image-item {
+  body main .flex-column-container .flex-container .image-container .image-item {
     width: 100%;
   }
 }
 body footer {
   background-color: rgb(98, 98, 98);
-  padding: 20px;
+  padding: 40px 10%;
   color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */
