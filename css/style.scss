@@ -2,21 +2,26 @@ body {
     font-family: 'Jost', sans-serif;
     background-color: rgb(234, 234, 234);
 
-    /*以下、ヘッダースクロール*/
+    /*以下、ヘッダースクロールとハンバーガーメニュー*/
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
     body {
         margin: 0;
         padding: 0;
     }
 
     header {
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 16px;
         position: fixed;
         top: 0;
         width: 100%;
         transition: top 0.3s ease-in-out;
-        z-index: 1000;
+        z-index: 9999;
         /* ヘッダーを最前面に配置 */
     }
 
@@ -24,12 +29,74 @@ body {
         top: -50px;
     }
 
-    main {
-        margin-top: 50px;
-        /* メインコンテンツの上部にヘッダーの高さを確保 */
+    button#menuButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 9999;
+        position: fixed;
     }
 
-    /*以上、ヘッダースクロール*/
+    .Menu {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        color: #111;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease-in-out;
+        z-index: 8888;
+        /* ヘッダーを最前面に配置 */
+
+        .menu-site-name {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 16px;
+        }
+    }
+
+    .Menu-CloseBtn-Icon {
+        width: 32px;
+        color: #111;
+    }
+
+    .Menu-Group {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 32px 12px;
+    }
+
+    .Menu-Group-Item {
+        width: 100%;
+        flex: auto;
+        padding: 4px;
+    }
+
+    .Menu-Group-Item-Link {
+        padding: 0.5em 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0.02em;
+    }
+
+    .Menu-Open {
+        left: 0;
+    }
+
+    /*以上、ヘッダースクロールとハンバーガーメニュー*/
 
     main {
         margin-inline: 10%;
@@ -94,6 +161,7 @@ body {
 
                             .item-title {
                                 margin-bottom: 8px;
+                                font-size: 20px;
                             }
 
                             .item-caption {
@@ -251,7 +319,7 @@ body {
     }
 
     footer {
-        background-color: rgb(98, 98, 98);
+        background-color: rgb(35, 35, 35);
         padding: 40px 10%;
         color: rgb(255, 255, 255);
     }
