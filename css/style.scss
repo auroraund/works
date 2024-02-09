@@ -167,6 +167,7 @@ body {
 
                             .item-caption {
                                 font-size: 14px;
+                                line-height: 22px;
                             }
                         }
                     }
@@ -326,5 +327,9 @@ body {
         background-color: rgb(35, 35, 35);
         padding: 40px 10%;
         color: rgb(255, 255, 255);
+        
+        .footer-page-title {
+            margin-bottom: 10px;
+        }
     }
 }

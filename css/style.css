@@ -139,6 +139,7 @@ body main .flex-column-container .flex-container .flex-item.right .inner-flex-it
 }
 body main .flex-column-container .flex-container .flex-item.right .inner-flex-item .item-caption {
   font-size: 14px;
+  line-height: 22px;
 }
 body main .flex-column-container .flex-container#about .right {
   border-left: solid 1px;
@@ -262,4 +263,7 @@ body footer {
   background-color: rgb(35, 35, 35);
   padding: 40px 10%;
   color: rgb(255, 255, 255);
+}
+body footer .footer-page-title {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
