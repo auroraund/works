@@ -110,6 +110,7 @@ body {
 
             img.top-image {
                 width: 100%;
+                border-radius: 4px;
             }
         }
 
@@ -236,6 +237,7 @@ body {
 
                     img {
                         width: calc(50% - 2px);
+                        border-radius: 4px;
                     }
 
                     @media screen and (max-width: 800px) {
@@ -257,6 +259,7 @@ body {
 
                         img {
                             width: 100%;
+                            border-radius: 4px;
                         }
 
                         .work-name {
@@ -272,6 +275,7 @@ body {
 
                         img {
                             width: 100%;
+                        
                         }
 
                         .caption {
