@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // 初期設定
     let prevScrollPos = window.pageYOffset;
     let header = document.getElementById("header");
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     header.classList.add("hidden");
 
     // スクロール時の処理
-    window.onscroll = function() {
+    window.onscroll = function () {
         let currentScrollPos = window.pageYOffset;
 
         // 下に300pxスクロールしたか、メニューが開いている場合はヘッダーを表示
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // ハンバーガーメニューのトグル
-    menuButton.addEventListener("click", function() {
+    menuButton.addEventListener("click", function () {
         // メニューが開かれた瞬間にヘッダーを表示する
         header.classList.add('Header-Visible');
 
@@ -48,7 +48,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // ページを離れる際にトップにスクロール
-    window.onbeforeunload = function() {
+    window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     };
+});
+
+// ローディングJS
+$(document).ready(function () {
+    // ローディング画面の表示
+    $(".loader").delay(1500).fadeOut('slow', function () {
+        // ローディングが終了したらスクロールを再開
+        $("body").css("overflow", "auto");
+    });
+
+    $(".loading_txt").delay(1200).fadeOut('slow');
+
+    // ローディング中はスクロールを禁止
+    $("body").css("overflow", "hidden");
 });
