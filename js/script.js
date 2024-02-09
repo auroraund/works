@@ -66,3 +66,14 @@ $(document).ready(function () {
     // ローディング中はスクロールを禁止
     $("body").css("overflow", "hidden");
 });
+
+// ビデオ要素を取得
+var video = document.getElementById("myVideo");
+
+// ビデオの速度を変更する関数
+function changeSpeed(newSpeed) {
+    video.playbackRate = newSpeed;
+}
+
+// 例: 速度をx倍に変更する
+changeSpeed(0.9);

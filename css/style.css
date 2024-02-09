@@ -105,6 +105,12 @@ body main .top-image-container .site-title {
   margin-top: 20px;
   text-align: center;
 }
+body main .top-image-container video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 8/5;
+}
 body main .top-image-container img.top-image {
   width: 100%;
   border-radius: 4px;
