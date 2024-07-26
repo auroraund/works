@@ -110,8 +110,10 @@ body {
     /*以上、ヘッダースクロールとハンバーガーメニュー*/
 
     main {
-        margin-inline: 10%;
+        max-width: 1200px;
+        margin: auto;
         margin-top: 30px;
+        padding-inline: 10%;
 
         .top-image-container {
             .site-title {
@@ -294,7 +296,7 @@ body {
 
                         img {
                             width: 100%;
-                        
+
                         }
 
                         .caption {
@@ -342,12 +344,77 @@ body {
     }
 
     footer {
-        background-color: rgb(35, 35, 35);
-        padding: 40px 10%;
-        color: rgb(255, 255, 255);
-        
+        background-color: rgb(225, 225, 225);
+        padding: 40px 10% 20px 10%;
+        color: #000000;
+
         .footer-page-title {
-            margin-bottom: 10px;
+            line-height: 40px;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 30px;
+
+            @media screen and (max-width: 800px) {
+                /*ウィンドウ幅がXXXpx以下の場合に適用*/
+                gap: 0px;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .flex-box {
+                width: 100%;
+
+                &#footer-link {
+                    margin-top: 42px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    
+                }
+
+                .footer-caption {
+                    line-height: 24px;
+                }
+
+                .flex-item {
+
+                    &#gunnet {
+                        p {
+                            color: rgb(128, 128, 128);
+                            width: 100%;
+                        }
+                    }
+
+                    &#turnover {
+                        p {
+                            color: rgb(53, 61, 126);
+                            width: 100%;
+                        }
+                    }
+
+                    &#mynapse {
+                        p {
+                            color: rgb(233, 172, 74);
+                            width: 100%;
+                        }
+                    }
+
+                    &#terminal {
+                        p {
+                            color: rgb(159, 113, 159);
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
         }
     }
 }
